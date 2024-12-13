@@ -9,7 +9,7 @@ The build steps for the full kit you can find [here](https://github.com/Zev-se/F
 
 Additions can be found ....
 
-The guide to convert to stealtchanger is ...
+The steps to convert to stealtchanger is [here](steps-to-stealthchanger.md)
 
 ## BOM
 
