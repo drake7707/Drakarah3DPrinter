@@ -83,5 +83,7 @@ I still need to print a nice box for it but it works, another TODO
 
 ![PXL_20241212_154946994](https://github.com/user-attachments/assets/542f5100-15c5-498b-a54a-64917d1460cf)
 
+### 7. Configuration
 
+So far configuration is pretty straight forward, I already defined toolheads in seperate config files, so following the [guide](https://github.com/DraftShift/StealthChanger/wiki/Configuration) was relatively easy.
 
