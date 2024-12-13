@@ -13,4 +13,4 @@ The steps to convert to stealtchanger is [here](steps-to-stealthchanger.md)
 
 ## BOM
 
-I try to keep track of a full bill of materials of the entire printer, so anything I add or remove gets updated in the BOM. You can find that ....
+I try to keep track of a full bill of materials of the entire printer, so anything I add or remove gets updated in the BOM. You can find that [here](BOM.xslx)
