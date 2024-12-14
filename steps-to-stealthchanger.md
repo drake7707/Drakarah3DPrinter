@@ -87,3 +87,5 @@ I still need to print a nice box for it but it works, another TODO
 
 So far configuration is pretty straight forward, I already defined toolheads in seperate config files, so following the [guide](https://github.com/DraftShift/StealthChanger/wiki/Configuration) was relatively easy.
 
+One gotcha I had during [dock position calibration](https://github.com/DraftShift/StealthChanger/wiki/Calibration) was that (as of the time of writing) it's still recommended to home, QGL and home again with T0, and then find the positions of the docks (this is not mentioned in the guide). The moment I took T0 off the shuttle the crash protection triggered disabling the motors so it was impossible to try and pick up a tool manually to find its dock position. Running `STOP_TOOL_PROBE_CRASH_DETECTION` is necessary to prevent this. Also when picking up the other tool manually, before testing the docking path make sure you re-run `INITIALIZE_TOOLCHANGER` because otherwise it will think T0 is still active and will try to dock on T0 instead of the correct dock.
+
