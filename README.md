@@ -15,7 +15,8 @@ Additions:
  - Front USB keystone
  - Very cheap USB Camera
  - Handles by 1-0-R
- - Stealtchanger
+ - Wiper nozzle (Bambu style)
+ - Stealthchanger
     - Top hat
     - Extra toolheads
     - CAN distribution
@@ -24,7 +25,7 @@ Additions:
     - Docks with crossbar
     - N3MI exhaust panel for multiple CAN cables instead of Galvanic mod
 
-My steps to convert to stealtchanger is [here](steps-to-stealthchanger.md)
+My steps to convert to stealthchanger is [here](journey-to-stealthchanger.md)
 
 ## BOM
 
