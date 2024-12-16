@@ -81,6 +81,13 @@ The top hat is still a work in progress and I still don't have the remaining 2 p
 
 For the actual umbilicals I bought some 1mm spring steel piano wire and used 2 of them next to the CAN cable to provide enough rigidity. A 3mm spring steel strip is recommended nowadays but I didn't have that so I tried to mimic it as best as I could. I used some tape to hold them in place and used some sleeving over it. The first umbilical I didn't put the piano wire all the way to the toolhead and I feel that was a mistake, it bent and pushed the toolhead backwards on the dock. When I extended the piano wire all the way to the toolhead (I use PUG instead of PG7) that worked much better for staying in the docks.
 
+One thing I had to make sure was that the natural curl the piano wires wanted to make aligned with the arc that I wanted the umbilical to make, so i had to clamp them down at the toolhead in the PUG in exactly the right orientation and the same at the PG7 gland at the exhaust.
+
+I used the [umbilical exhaust by N3MI](https://github.com/DraftShift/CableManagement/tree/main/UserMods/N3MI-DG/Umbilical_Plates) to attach the exhausts at the back. Make sure your dimensions are accurate and shrinkage and hole compensation settings are accurate. I had a lot of trouble getting the PG7 glands to screw in.
+
+Determining the length of the umbilical was not that easy. The docks in the corners need a slightly longer one to make the same arc. Mine are about 70cm but I feel that's still too long. It's a lot of testing that the toolhead doesn't get yanked backwards but also that the front corners can be reached without putting too much strain on the umbilical. I still probably need to adjust them as I go.
+
+
 ![PXL_20241208_120110282](https://github.com/user-attachments/assets/657b9bcb-e9ad-4ddc-a940-f0cd234ee3e6)
 
 Then I clipped the PTFE tube alongside the umbilicals with some custom designed [cable clips](CableClip-Body001.step) (sized to my umbilical thickness)
