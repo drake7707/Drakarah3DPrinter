@@ -21,7 +21,7 @@ I did buy some shitty fans mostly because I wanted to keep costs down and I didn
 
 ### 2. Docks
 
-I printed and assembled the modular docks from DraftShift Design (the same team behind StealtChanger). Assembling them is pretty straight forward, building the cup filled with RTV silicone was the most annoying and messy part. The wiper to hold the small PTFE tube kept breaking too, but with some superglue and some old laptop screws I managed to get it built.
+I printed and assembled the modular docks from DraftShift Design (the same team behind StealthChanger). Assembling them is pretty straight forward, building the cup filled with RTV silicone was the most annoying and messy part. The wiper to hold the small PTFE tube kept breaking too, but with some superglue and some old laptop screws I managed to get it built.
 
 ![PXL_20241118_172505338](https://github.com/user-attachments/assets/9c1f6740-cc41-4b75-96a4-aaee30d31547)
 
@@ -61,7 +61,7 @@ With the help of the belt keeper I tensioned the belts so I didn't even have to 
 
 ### 6. Top hat
 
-Umbilicals are probably the most important in a Stealtchanger build. They need to push the tools into the docks so they sit straight (and they can be picked up well) and don't get yanked off by the weight of the umbilical. In order to have enough clearance for the umbilicals the Z needs to be extended. With the top panel in place on the frame it's impossible to reach the full Z without squishing the umbilical so the solution is a top hat.
+Umbilicals are probably the most important in a StealthChanger build. They need to push the tools into the docks so they sit straight (and they can be picked up well) and don't get yanked off by the weight of the umbilical. In order to have enough clearance for the umbilicals the Z needs to be extended. With the top panel in place on the frame it's impossible to reach the full Z without squishing the umbilical so the solution is a top hat.
 
 Of course if you never print enclosed then it's not necessary but I want to keep ABS and ASA as options.
 
