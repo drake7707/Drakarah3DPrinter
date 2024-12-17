@@ -45,7 +45,7 @@ By default the speed is 15mm/s, that is pretty slow to do a tool change. I gradu
 
 ### 5. Shuttle
 
-The TAP carriage needs to be replaced with the StealthChanger shuttle. In fact if you put a backplate on a tool and the shuttle on the X rail then everything will still work with the TAP configuration.
+The TAP carriage needs to be replaced with the StealthChanger shuttle. In fact if you put a backplate on a tool and the shuttle on the X rail then everything will still work with the TAP configuration. I ran this for quite some time, this is how I gradually converted my printer to Stealthchanger without losing the ability to print while doing so.
 
 I struggled here to print the shuttle belt grooves properly, so I ended up using the shuttle keeper spacer to hold the belts in place and then bolt the shuttle to the keeper and the carriage.
 
@@ -59,11 +59,35 @@ Finding N52 magnets seemed to be hard, I found some on amazon but they were 6.7m
 
 With the help of the belt keeper I tensioned the belts so I didn't even have to use the idlers tension screws much.
 
+I didn't have any issue mating the shuttle with the backplate, I first installed the bushings in the shuttle and glued them in place. I cracked several shuttles trying to insert the bushings (don't use eSun ABS+ for a shuttle). One shuttle ended up cracking when I bolted it to the carriage, which caused the bushings to have too much play and not trigger the Octotap sensor anymore.
+
+My octotap sensors combined with my printed shuttles are very sensitive to slight deviations in angle, so while I initially just extended the shuttle tip by gluing a piece of filament on top so it triggers octotap more reliably it was really solving a problem whose cause would have other issues as well. So my latest attempt that seems to work well is:
+
+ - Install bushings in shuttle, glue them in place so they can't move around and flex
+ - Install magnets in the shuttle. Make sure to fit them in first before adding glue because mine set too quickly and caused one of the magnets to not fully seat *sigh*. Tolerances 🙄
+ - Mate with a backplate so the pins are aligned to the bushings, glue the pins in place and let it dry while mated with the shuttle, that ensures they stay aligned
+ - Add the magnet in the backplate, make sure of the correct polarity, glue it in place after fitting them first
+ - Add and adjust the preload screws of the backplate, first screwing them fully in and then back them out by half or quarter turns each. Too far and the octotap won't trigger anymore, not far enough and there will be too much play. When putting the toolhead on the shuttle there should be absolutely no side to side play (rotation around the Y axis), if there is probe accuracy will suffer. Adjust the preload screws until there is none.
+
+Those N52 magnets are strong, make sure to use enough glue, I didn't at first and they got loose after a while causing probe accuracy issues and eventually tool changes to fail.
+
+After doing that I have good probe accuracy and no issue with tool changes.
+
+In fact to troubleshoot probe accuracy I now check:
+ - Loose screws anywhere? Shuttle screws, backplate screws, octotap screws?
+ - Are the magnets still sitting flush? Are they loose in either shuttle or backplate?
+ - Is there play in the toolhead? Check preload screws and adjust
+ - Is there wiggle room in the bushings or pins of the backplate?
+ - Are there any cracks in the shuttle, especially near the top bushings. Again really don't use eSun ABS+, layer adhesion is horrible.
+
+Any of these things will cause probe accuracy and potential docking issues.
+
+
 ### 6. Top hat
 
 Umbilicals are probably the most important in a StealthChanger build. They need to push the tools into the docks so they sit straight (and they can be picked up well) and don't get yanked off by the weight of the umbilical. In order to have enough clearance for the umbilicals the Z needs to be extended. With the top panel in place on the frame it's impossible to reach the full Z without squishing the umbilical so the solution is a top hat.
 
-Of course if you never print enclosed then it's not necessary but I want to keep ABS and ASA as options.
+I wanted to keep ABS and ASA as options so keeping the printing enclosed was mandatory.
 
 There are several options, from a printed top hat to using extrusions and polycarbonate panels. For a 350 build it's recommended to have at least 20mm extra in height, which would be a lot of plastic. I switched to a Clicky Clack door earlier so I had the 2 spare 24cm stock doors lying around, so I decided to go with the latter option.
 
@@ -83,7 +107,7 @@ For the actual umbilicals I bought some 1mm spring steel piano wire and used 2 o
 
 One thing I had to make sure was that the natural curl the piano wires wanted to make aligned with the arc that I wanted the umbilical to make, so i had to clamp them down at the toolhead in the PUG in exactly the right orientation and the same at the PG7 gland at the exhaust.
 
-I used the [umbilical exhaust by N3MI](https://github.com/DraftShift/CableManagement/tree/main/UserMods/N3MI-DG/Umbilical_Plates) to attach the exhausts at the back. Make sure your dimensions are accurate and shrinkage and hole compensation settings are accurate. I had a lot of trouble getting the PG7 glands to screw in.
+I used the [umbilical exhaust by N3MI](https://github.com/DraftShift/CableManagement/tree/main/UserMods/N3MI-DG/Umbilical_Plates) to attach the exhausts at the back. I had a lot of trouble getting the PG7 glands to screw in. I probably need to tune shrinkage and hole compensation settings more.
 
 Determining the length of the umbilical was not that easy. The docks in the corners need a slightly longer one to make the same arc. Mine are about 70cm but I feel that's still too long. It's a lot of testing that the toolhead doesn't get yanked backwards but also that the front corners can be reached without putting too much strain on the umbilical. I still probably need to adjust them as I go.
 
@@ -108,7 +132,7 @@ So far installation and configuration is pretty straight forward, I already defi
 
 #### Calibration
 
-One gotcha I had during [dock position calibration](https://github.com/DraftShift/StealthChanger/wiki/Calibration) was that (as of the time of writing) it's still recommended to home, QGL and home again with T0, and then find the positions of the docks (this is not mentioned in the guide). The moment I took T0 off the shuttle the crash protection triggered disabling the motors so it was impossible to try and pick up a tool manually to find its dock position. Running `STOP_TOOL_PROBE_CRASH_DETECTION` is necessary to prevent this. Also when picking up the other tool manually, before testing the docking path make sure you re-run `INITIALIZE_TOOLCHANGER` because otherwise it will think T0 is still active and will try to dock on T0 instead of the correct dock.
+One gotcha I had during [dock position calibration](https://github.com/DraftShift/StealthChanger/wiki/Calibration) was that (as of the time of writing) it's still recommended to home, QGL and home again with T0, and then find the positions of the docks (this is not mentioned in the guide). The moment I took T0 off the shuttle the crash protection triggered disabling the motors so it was impossible to try and pick up a tool manually to find its dock position. Running `STOP_TOOL_PROBE_CRASH_DETECTION` is necessary to prevent this. Also when picking up the other tool manually, before testing the docking path make sure you re-run `INITIALIZE_TOOLCHANGER` because otherwise it will think T0 is still active and will try to dock on T0 instead of the correct dock (as I found out the hard way).
 
 For the cups filled with RTV the spring on one was too weak causing it to not contact the nozzle. I added a few washers so it sits higher and that seemed to help but it tilts the toolhead backwards. I've added some M3x12 screws in the docks that correspond to the holes of the M3x50mm screws of the StealthBurner toolhead to prevent to lock it in place. It still tilts back a bit but it can't because the screws are holding it back further. That seemed to work fine. Normally you would add screws the other way and use 5x2mm magnets to lock it in place, but I don't have magnetic screws at the moment. I set it up in the following order: 1) put the tool on the dock 2) adjust the cup height so the nozzle hits the RTV of the cup but not too much it causes too much tilt 3) adjust the back of the dock so the toolhead sits level and doesn't tilt to one side other than backwards 4) do a manual pick up and release with the shuttle and adjust until the toolhead doesn't stray too far off so the pins still go smoothly into the bushings once you pick it up again.
 
@@ -118,7 +142,7 @@ I used a sexball probe which wasn't straight forward to get working. There is qu
 
 #### Slicer setup
 
-I use OrcaSlicer and as of v2.2.0 it supports multiple toolheads. Unfortunately you have to set up a whole new printer profile from the Generic Multitool profile to do so (and re-apply all your settings). I've set the idle temp in the filament settings and preheat time in the ooze prevention settings so it drops the temperature when not in use (saving power and squeezing slightly more margin out of the 200W PSU). To ramp them up to idle at the start you can specify those temperaturates along in PRINT_START. Replace M104 with M109 to do them one by one if the PSU is not strong enough.
+I use OrcaSlicer and as of v2.2.0 it supports multiple toolheads. Unfortunately I had to set up a whole new printer profile from the Generic Multitool profile to do so (and re-apply all my settings). I've set the idle temp in the filament settings and preheat time in the ooze prevention settings so it drops the temperature when not in use (saving power and squeezing slightly more margin out of the 200W PSU). To ramp them up to idle at the start I specified those temperaturates along in PRINT_START. Replace M104 with M109 to do them one by one if the PSU is not strong enough.
 
 This is the machine G-Code from OrcaSlicer (credits go to @theaninova on discord):
 ```
@@ -230,6 +254,19 @@ gcode:
 ```
 
 I had the pressure advance settings per filament in the SET_MATERIAL, but I moved that to the filament settings in OrcaSlicer because it emits a SET_PRESSURE_ADVANCE at every filament change.
+
+To make sure T0 is active I used the following gcode. Using any other tool to home and QGL is going to cause issues with z-offset and docking:
+```
+[gcode_macro CHECK_ACTIVE_T0]
+gcode:
+  {% set tool = printer[printer.toolchanger.tool].tool_number %}
+  {% if tool != 0 %}
+    {% set msg = 'T0 is not active, active tool is ' ~ tool|string ~ '. Cancelling print.' %}
+    SET_DISPLAY_TEXT MSG="{msg}"
+    RESPOND TYPE=error MSG="{msg}"
+    CANCEL_PRINT
+  {% endif %}
+```
 
 One issue I had was that it took a long time for the temperature to settle, even with long preheat time it often caused delays at tool swaps. OrcaSlicer emits M109 at every filament change when using ooze prevention, the default M109 waits until it's stable within 0.5 degrees which is too precise.
 There is already an override from TAP changer, but this override from DSD is better as it allows you to set the deadband, so rather than a 0.5° it now uses a 3° variance for stability. This still needs to be tweaked depending on the hotend. My Dragon HF stabilizes much quicker than the cheap V6 nozzle.
