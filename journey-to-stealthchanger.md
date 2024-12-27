@@ -121,9 +121,13 @@ Then I clipped the PTFE tube alongside the umbilicals with some custom designed 
 
 Finally the CAN wiring. Initially I had the CAN cable broken out in the electronics bay and used some wago clips, but that meant I also had to run each umbilical downwards, that's not very scalable with more toolheads, so I moved the wagos up near the exhaust and ran 2 1.5mm² power wires along with some leftover CAN cable for the CAN wires, all sleeved together and then attached the umbilicals there.
 
-I still need to print a nice box for it but it works, another TODO.
-
 ![PXL_20241212_154946994](https://github.com/user-attachments/assets/542f5100-15c5-498b-a54a-64917d1460cf)
+
+I've designed [a box](https://www.printables.com/model/1119606-wago-can-distribution-box-for-n3mi-umbilical-plate) to make it neater.
+
+![image](https://github.com/user-attachments/assets/cb25afbf-55b7-483d-a81a-d7987f48c784)
+
+![image](https://github.com/user-attachments/assets/8b940755-d5db-489d-b8d2-50773141c6c4)
 
 ### 8. Configuration
 
