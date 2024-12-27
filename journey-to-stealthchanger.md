@@ -108,7 +108,7 @@ For the actual umbilicals I bought some 1mm spring steel piano wire and used 2 o
 
 One thing I had to make sure was that the natural curl the piano wires wanted to make aligned with the arc that I wanted the umbilical to make, so i had to clamp them down at the toolhead in the PUG in exactly the right orientation and the same at the PG7 gland at the exhaust.
 
-I used the [umbilical exhaust by N3MI](https://github.com/DraftShift/CableManagement/tree/main/UserMods/N3MI-DG/Umbilical_Plates) to attach the exhausts at the back. I had a lot of trouble getting the PG7 glands to screw in. I probably need to tune shrinkage and hole compensation settings more.
+I used the [umbilical exhaust by N3MI](https://github.com/DraftShift/CableManagement/tree/main/UserMods/N3MI-DG/Umbilical_Plates) to attach the exhausts at the back. I had a lot of trouble getting the PG7 glands to screw in. I initially thought I probably need to tune shrinkage and hole compensation settings more but after buying some new PG7 glands those fit perfectly, so the ones I got with the Formbot kit were out of spec.
 
 Determining the length of the umbilical was not that easy. The docks in the corners need a slightly longer one to make the same arc. Mine are about 70cm but I feel that's still too long. It's a lot of testing that the toolhead doesn't get yanked backwards but also that the front corners can be reached without putting too much strain on the umbilical. I still probably need to adjust them as I go.
 
