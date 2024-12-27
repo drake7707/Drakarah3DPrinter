@@ -69,7 +69,7 @@ My octotap sensors combined with my printed shuttles are very sensitive to sligh
  - Add the magnet in the backplate, make sure of the correct polarity, glue it in place after fitting them first
  - Add and adjust the preload screws of the backplate, first screwing them fully in and then back them out by half or quarter turns each. Too far and the octotap won't trigger anymore, not far enough and there will be too much play. When putting the toolhead on the shuttle there should be absolutely no side to side play (rotation around the Y axis), if there is probe accuracy will suffer. Adjust the preload screws until there is none.
 
-Those N52 magnets are strong, make sure to use enough glue, I didn't at first and they got loose after a while causing probe accuracy issues and eventually tool changes to fail.
+Those N52 magnets are strong, make sure to use enough glue, I didn't at first and they got loose after a while causing probe accuracy issues and eventually tool changes to fail. I also had my nozzles dragging over the print during fast travel moves.
 
 After doing that I have good probe accuracy and no issue with tool changes.
 
@@ -79,8 +79,9 @@ In fact to troubleshoot probe accuracy I now check:
  - Is there play in the toolhead? Check preload screws and adjust
  - Is there wiggle room in the bushings or pins of the backplate?
  - Are there any cracks in the shuttle, especially near the top bushings. Again really don't use eSun ABS+, layer adhesion is horrible.
+ - Are the bushings still securely glued in place?
 
-Any of these things will cause probe accuracy and potential docking issues.
+Any of these things will cause probe accuracy, z-offset inaccuracies and potential docking issues.
 
 
 ### 6. Top hat
