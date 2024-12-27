@@ -154,13 +154,26 @@ And this is my print start:
 ```gcode
 [gcode_macro PRINT_START]
 variable_printing: False
+variable_tools_used_during_print: []
 gcode:
   {% set material = params.FILAMENT|default('PLA')|string %} ; Get material type from params
   {% set bedtemp = params.BED_TEMP|default('0')|string %} ; Get the bed temperature
   {% set chambertemp = params.CHAMBER_TEMP|default('0')|string %} ; Get the chamber temperature
-
+  
   M117 Initializing  
   SET_GCODE_VARIABLE MACRO=PRINT_START VARIABLE=printing VALUE=False
+
+  # Register the tools used during print
+  {% set tools_used_during_print = [] %}
+  {% for tool_nr in printer.toolchanger.tool_numbers %}
+    {% set tooltemp_param = 'T' ~ tool_nr|string ~ '_TEMP' %}
+    {% if tooltemp_param in params %}
+      {% set _ = tools_used_during_print.append(tool_nr) %}
+      SET_GCODE_VARIABLE macro=PRINT_START variable=tools_used_during_print value="{tools_used_during_print}"
+    {% endif %}
+  {% endfor %}
+  RESPOND TYPE='echo' MSG="The print uses the following tools: {tools_used_during_print|join(' ')}. M104 will be ignored for all other tools while the print is active"
+
   
   INITIALIZE_TOOLCHANGER
   CHECK_ACTIVE_T0 ; Check T0 is active
@@ -187,10 +200,10 @@ gcode:
   STATUS_HOMING
   G28
 
-  #SET_DISPLAY_TEXT MSG="Building adaptive bed mesh" 
-  #STATUS_MESHING
-  #BED_MESH_CALIBRATE ADAPTIVE=1             ; do a bed mesh
-  #G1 Z20 F3000                   ; move nozzle away from bed
+  SET_DISPLAY_TEXT MSG="Building adaptive bed mesh" 
+  STATUS_MESHING
+  BED_MESH_CALIBRATE ADAPTIVE=1             ; do a bed mesh
+  G1 Z20 F3000                   ; move nozzle away from bed
     
   M109 S0 # Stop to heat, the actual printing may happen with a different hotend.
 
@@ -296,6 +309,49 @@ gcode:
         TEMPERATURE_WAIT SENSOR={extruder} MINIMUM={s-(deadband/2)} MAXIMUM={s+(deadband/2)}   ; Wait for hotend temp (within D degrees)
     {% endif %}
 ```
+#### Workaround for an annoying bug in OrcaSlicer
+
+When printing single color on any toolhead other than T0, it still preheats T0 for some reason, and it does so multiple times so just setting it to 0° does not work for long. I worked around that by keeping track of the tools that are used in PRINT_START (see '#Register the tools used during print' above) and then check if the M104 call to heat a toolhead is in that list:
+```gcode
+[gcode_macro M104]
+rename_existing: M104.1
+description: [T<index>] [S<temperature>]
+  Set tool temperature.
+  T= Tool number, optional. If this parameter is not provided, the current tool is used.
+  S= Target temperature
+gcode:
+  {% if params.T is defined %}
+
+     {% set can_change_temp = False %}
+     {% if printer["gcode_macro PRINT_START"].printing %}
+      {% set tool_nr = params.T|default(printer.tool_probe_endstop.active_tool_number)|int %}
+      {% set tools_used = printer["gcode_macro PRINT_START"].tools_used_during_print %}
+      
+      {% if tool_nr in tools_used %}
+        #RESPOND TYPE=echo MSG="Tool {tool_nr} is used in print, can set temp to requested tool"  
+        {% set can_change_temp = True %}
+      {% else %}
+        RESPOND TYPE=echo MSG="Tool {tool_nr} is not used in print, ignoring request for M104"
+      {% endif %}
+    {% else %}
+      #RESPOND TYPE=echo MSG="Not printing, can set temp to requested tool {tool_nr}"
+      {% set can_change_temp = True %}
+    {% endif %}
+
+    {% if can_change_temp %}
+      {% set newparameters = "" %}
+      {% set newparameters = newparameters ~ " T="~params.T %}
+      {% if params.S is defined %}
+        {% set newparameters = newparameters ~ " TARGET="~params.S %}
+      {% endif %}
+      SET_TOOL_TEMPERATURE{newparameters}
+    {% endif %}
+    
+  {% else %}
+    M104.1 {rawparams}
+  {% endif %}
+```
+
 
 ### 9. Test print
 
