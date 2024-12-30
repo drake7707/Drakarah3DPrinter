@@ -7,23 +7,25 @@ The printer started of a Formbot kit and has been upgraded
 
 The build steps for the full kit you can find [here](https://github.com/Zev-se/Formbot-voron-2.4-build-guide)
 
+My build log is on Instagram as reels: [part 1](https://www.instagram.com/stories/highlights/18031423286360519/) and [part 2](https://www.instagram.com/stories/highlights/17904237141050138/)
+
 ### Hardware Additions:
 
- - Clicky clack door
- - Tough handles
- - BZI (thinking that my Z tension wasn't good but it ended up being TMC Autotune putting the Z motors in stealtchop which can't go fast)
- - Front USB keystone
+ - [Clicky clack door](https://github.com/tanaes/whopping_Voron_mods/tree/main/clickyclacky_door) for better sealing of front door
+ - [Tough latches](https://www.printables.com/model/1061047-tough-latches-with-space-for-18mm-dowel-pins) (remixed with 1.8mm dowel pins) for easier panel removal
+ - [Beefy Z idlers](https://github.com/clee/VoronBFI) for easier Z belt tensioning
+ - [Front USB keystone](https://www.printables.com/model/609433-voron-skirt-keystone-for-usbethernet) to easily plug in an USB stick to print from that when network is not availabe
  - Very cheap USB Camera
- - Handles by 1-0-R
- - Wiper nozzle (Bambu style)
- - Stealthchanger
+ - [Handles by 1-0-R](https://mods.vorondesign.com/details/xa84lhUN5aMX4nmfZquaQ) with [spacer](https://www.printables.com/model/1098129-top-hat-spacer-for-voron-handle-by-1-0-r) so I can lift and tilt the printer more easily
+ - [Wiper nozzle (Bambu style)](https://www.printables.com/model/1054455-voron-24-nozzle-brush-using-bambu-labs-a1-silicon) which is really important as a non clean nozzle will affect probing and thus Z-offset
+ - [Stealthchanger](https://github.com/DraftShift/StealthChanger)
     - Top hat
     - Extra toolheads
     - CAN distribution
     - Shuttle instead of TAP
-    - Mini BFI
-    - Docks with crossbar
-    - N3MI exhaust panel for multiple CAN cables instead of Galvanic mod
+    - [Mini BFI](https://github.com/DraftShift/StealthChanger/tree/main/UserMods/BT123/MiniBFI%20%2B%20MicroBFI) so the gantry clears the crossbar
+    - [Docks](https://github.com/DraftShift/ModularDock) with crossbar
+    - [N3MI exhaust panel](https://github.com/DraftShift/CableManagement/tree/main/UserMods/N3MI-DG/Umbilical_Plates) and [CAN box](https://www.printables.com/model/1119606-wago-can-distribution-box-for-n3mi-umbilical-plate) for multiple CAN cables instead of Galvanic mod
 
 My steps to convert to stealthchanger is [here](journey-to-stealthchanger.md)
 
