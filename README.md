@@ -16,6 +16,8 @@ My build log is on Instagram as reels: [part 1](https://www.instagram.com/storie
  - [Beefy Z idlers](https://github.com/clee/VoronBFI) for easier Z belt tensioning
  - [Front USB keystone](https://www.printables.com/model/609433-voron-skirt-keystone-for-usbethernet) to easily plug in an USB stick to print from that when network is not availabe
  - Very cheap USB Camera
+ - USB splitter 1 to 4 to give me extra USB connections, one towards the back keystone panel, one towards the front USB keystone, one for the USB camera and one unused at the moment (might be used by a Wifi adapter)
+ - Sonoff POW R2 to monitor the power usage of the printer (posts to MQTT)
  - [Handles by 1-0-R](https://mods.vorondesign.com/details/xa84lhUN5aMX4nmfZquaQ) with [spacer](https://www.printables.com/model/1098129-top-hat-spacer-for-voron-handle-by-1-0-r) so I can lift and tilt the printer more easily
  - [Wiper nozzle (Bambu style)](https://www.printables.com/model/1054455-voron-24-nozzle-brush-using-bambu-labs-a1-silicon) which is really important as a non clean nozzle will affect probing and thus Z-offset
  - [Stealthchanger](https://github.com/DraftShift/StealthChanger)
