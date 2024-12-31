@@ -45,3 +45,6 @@ My steps to convert to stealthchanger is [here](journey-to-stealthchanger.md)
 ## BOM
 
 I try to keep track of a full bill of materials of the entire printer, so anything I add or remove gets updated in the BOM. You can find that [here](BOM.xslx)
+
+![image](https://github.com/user-attachments/assets/0113f41d-fd71-413b-9caf-045a5da302cd)
+
