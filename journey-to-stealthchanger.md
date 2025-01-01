@@ -80,6 +80,7 @@ In fact to troubleshoot probe accuracy I now check:
  - Is there wiggle room in the bushings or pins of the backplate?
  - Are there any cracks in the shuttle, especially near the top bushings. Again really don't use eSun ABS+, layer adhesion is horrible.
  - Are the bushings still securely glued in place?
+ - Check for warpage of the hotend/backplate, shim if necessary so the nozzle is perpendicular to the bed
 
 Any of these things will cause probe accuracy, z-offset inaccuracies and potential docking issues.
 
