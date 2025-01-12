@@ -33,6 +33,13 @@ There are a couple of options to provide bottom support, a crossbar with a doorb
 
 ![PXL_20241212_095923227](https://github.com/user-attachments/assets/2fda7d7a-4040-4269-aaa0-8f529973d6d1)
 
+I ended up redoing the docks removing the top support with [Crabby docks](https://www.printables.com/model/994635-stealthchanger-stealthburner-minimal-docks-aka-hap). It looks nicer and doesn't obscure as much
+![PXL_20250101_112623563](https://github.com/user-attachments/assets/9d3291cd-da54-44f9-9349-02b0e5895c78)
+
+Rather than using magnets to lock the tools in I'm using screws with PTFE tube over them. That secures the tools so much in their docks I can put the whole printer on its side and they will stay put. I tried with 5x2mm magnets but they were not powerful enough to keep the tool in place and it limits the tilt enough that I could reduce the umbilical length, which in turn helped with umbilicals not getting stuck under each other
+
+![PXL_20250102_114548267](https://github.com/user-attachments/assets/ecdf5828-476f-4046-8bb0-8c27d4ad3cf3)
+
 ### 3. Sensorless homing
 
 When installing the shuttle there is no X-endstop like there is on the TAP carriage (because otherwise tools wouldn't be able to be detached), so the easiest option is sensorless for X (I ended up doing sensorless for both X and Y). I followed [this](https://github.com/EricZimmerman/VoronTools/blob/main/Sensorless.md) guide and it worked fairly well. The gotcha that got me was that I had to configure TMC autotune as well, otherwise it would work while calibration but fail during normal operation. And it is quite scary home incorrectly and then have the toolhead slam into the gantry. Make sure you calibrate when the gantry isn't level, it adds extra friction so your threshold isn't triggered too soon. 
@@ -112,12 +119,14 @@ One thing I had to make sure was that the natural curl the piano wires wanted to
 
 I used the [umbilical exhaust by N3MI](https://github.com/DraftShift/CableManagement/tree/main/UserMods/N3MI-DG/Umbilical_Plates) to attach the exhausts at the back. I had a lot of trouble getting the PG7 glands to screw in. I initially thought I probably need to tune shrinkage and hole compensation settings more but after buying some new PG7 glands those fit perfectly, so the ones I got with the Formbot kit were out of spec.
 
-Determining the length of the umbilical was not that easy. The docks in the corners need a slightly longer one to make the same arc. Mine are about 70cm but I feel that's still too long. It's a lot of testing that the toolhead doesn't get yanked backwards but also that the front corners can be reached without putting too much strain on the umbilical. I still probably need to adjust them as I go.
+Determining the length of the umbilical was not that easy. The docks in the corners need a slightly longer one to make the same arc. Mine are about 70cm but I feel that's still too long. It's a lot of testing that the toolhead doesn't get yanked backwards but also that the front corners can be reached without putting too much strain on the umbilical.
+
+After some tweaking 60cm is a better length, with a longer length they often got stuck underneath each other and they tended to flop more to the side, with 60cm they don't interfere with each other anymore even though they pull the tool backwards more but the tilt is limited by having the physical screws on the docks to lock the tools in place. Too much tilt would prevent correct alignment of the backplate pins with the shuttle so those docks screws are very mandatory with a shorter umbilical.
 
 
 ![PXL_20241208_120110282](https://github.com/user-attachments/assets/657b9bcb-e9ad-4ddc-a940-f0cd234ee3e6)
 
-Then I clipped the PTFE tube alongside the umbilicals with some custom designed [cable clips](CableClip-Body001.step) (sized to my umbilical thickness)
+Then I clipped the reverse bowden tube alongside the umbilicals with some custom designed [cable clips](CableClip-Body001.step) (sized to my umbilical thickness)
 
 ![PXL_20241212_154016937](https://github.com/user-attachments/assets/efabc138-f892-4401-b494-5589af3198ec).
 
@@ -315,7 +324,7 @@ gcode:
         TEMPERATURE_WAIT SENSOR={extruder} MINIMUM={s-(deadband/2)} MAXIMUM={s+(deadband/2)}   ; Wait for hotend temp (within D degrees)
     {% endif %}
 ```
-#### Workaround for an annoying bug in OrcaSlicer
+#### Workaround for an annoying [bug](https://github.com/SoftFever/OrcaSlicer/issues/7842) in OrcaSlicer 2.2.0
 
 When printing single color on any toolhead other than T0, it still preheats T0 for some reason, and it does so multiple times so just setting it to 0° does not work for long. I worked around that by keeping track of the tools that are used in PRINT_START (see '#Register the tools used during print' above) and then check if the M104 call to heat a toolhead is in that list:
 ```gcode
@@ -361,7 +370,9 @@ gcode:
 
 ### 9. Test print
 
-I created some cubes in Orca, positioned them next to each other, changed their height to 1mm and set each one to a different tool. That allowed me to see if the calculated Z-offset of T1 is good (based off the gcode z offset) and to see if the X and Y are aligned (to test the gcode x and y offsets). It also is a good test for tool changes.
+I created some cubes in Orca, positioned them next to each other, changed their height to 1mm and set each one to a different tool. That allowed me to see if the calculated Z-offset of T1 is good (based off the gcode z offset) and to see if the X and Y are aligned (to test the gcode x and y offsets). It also is a good test for tool changes. This one is with 3 tools:
+
+![PXL_20250102_185223868](https://github.com/user-attachments/assets/a8dbebc1-42f4-4445-9ea4-04be8e030880)
 
 After doing a longer print with 108 tool changes it's probably good to inspect what else needs adjusting and what broke. I needed to adjust the cup as mentioned to prevent ooze and my wiper on one toolhead broke. The PUG on one toolhead also broke because the umbilical keeps getting snagged under the frame until it violently rebounds. During the print the prime tower also lifted from the bed so more brim was required.
 
