@@ -29,12 +29,12 @@ My build log is on Instagram as reels: [part 1](https://www.instagram.com/storie
     - [Docks](https://github.com/DraftShift/ModularDock) with crossbar
     - [N3MI exhaust panel](https://github.com/DraftShift/CableManagement/tree/main/UserMods/N3MI-DG/Umbilical_Plates) and [CAN box](https://www.printables.com/model/1119606-wago-can-distribution-box-for-n3mi-umbilical-plate) for multiple CAN cables instead of Galvanic mod
 
-My steps to convert to stealthchanger is [here](journey-to-stealthchanger.md)
+My steps to convert to stealthchanger are [here](journey-to-stealthchanger.md)
 
 ### Software additions
 
  - [Klippain Shake&Tune](https://github.com/Frix-x/klippain-shaketune) (for belt comparison and input shaping)
- - [TMC Autotune](https://github.com/andrewmcgr/klipper_tmc_autotune) with everything set to performance becaues I had issues with silent tuning
+ - [TMC Autotune](https://github.com/andrewmcgr/klipper_tmc_autotune) with everything set to performance because I had issues with 'silent' tuning
  - Exclude object
  - [Klipper Backup](https://klipperbackup.xyz/) (to automatically backup the config to github)
  - [Crowsnest](https://github.com/mainsail-crew/crowsnest) and [Moonraker Timelapse](https://github.com/mainsail-crew/moonraker-timelapse) (for webcam stream and timelapse gneneration)
