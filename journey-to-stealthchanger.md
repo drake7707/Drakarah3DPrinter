@@ -107,9 +107,12 @@ My extrusions inner diameter are 5mm, while the ones I ordered from the top hat 
 
 Another issue I had was that the handles I was using interfere with the top hat panels, I designed and created a [spacer](Voron-1-R-Handle-Spacer.step) for that too. I designed it in such a way that it could be printed standing on its side to provide the best tensile strength.
 
-The top hat is still a work in progress and I still don't have the remaining 2 panels so this might change in the future: TODO
+![PXL_20250121_143938197](https://github.com/user-attachments/assets/df42d49f-b97f-4365-b98c-25a239750f7d)
 
-![PXL_20241207_132427544](https://github.com/user-attachments/assets/70af1413-4823-4a93-86b8-c429d841b3a1)
+Not having an extrusion for the front of the top hat (it's used as crossbar) is a bit annoying to have a tight seal, but the weatherseal strip seems to work alright. Unfortunately my panels were not cut to 0.1mm tolerances, like 0.5mm too tall, which is giving me issues to put panel clamps on the top. I've instead added more on the side to increase friction so it stays put.
+
+Unfortunately it didn't do much for keeping the chamber temperature high for ABS printing, I barely get above 40° C and that's with The Filter + side filters (4 blower fans) at full blast.
+
 
 ### 7. Umbilicals and CAN wiring
 
