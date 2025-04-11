@@ -92,6 +92,7 @@ In fact to troubleshoot probe accuracy I now check:
 
 Any of these things will cause probe accuracy, z-offset inaccuracies and potential docking issues.
 
+*Update April 2025* After some weeks of printing it becare clear that CA superglue is *not* good enough to keep the magnets in place, I've had several failures of both backplates and shuttle where the magnet popped out and then rode along so it couldn't tool change anymore. I've been recommended to use 2 component epoxy glue to secure them or use [6x3 with 2mm ID screw in magnets with M2 self tapping screws](https://discord.com/channels/1226846451028725821/1226846451594821707/1359884602902052894) to secure them into the plastic.
 
 ### 6. Top hat
 
@@ -147,7 +148,7 @@ I've designed [a box](https://www.printables.com/model/1119606-wago-can-distribu
 
 #### Installation 
 
-So far installation and configuration is pretty straight forward, I already defined toolheads in seperate config files, so following the [guide](https://github.com/DraftShift/StealthChanger/wiki/Configuration) was relatively easy.
+So far installation and configuration is pretty straight forward, I already defined toolheads in seperate config files, so following the [guide](https://github.com/DraftShift/StealthChanger/wiki/Configuration) was relatively easy. Make sure to use the [easy config](https://github.com/jwellman80/klipper-toolchanger-easy) by @averen or use the klipper-toolchanger from June 2024 because newer commits have broken stealthchanger. There is a DSD fork in the works that will bring everything together but right now it's still in alpha and I have not used it yet.
 
 #### Calibration
 
@@ -328,6 +329,8 @@ gcode:
     {% endif %}
 ```
 #### Workaround for an annoying [bug](https://github.com/SoftFever/OrcaSlicer/issues/7842) in OrcaSlicer 2.2.0
+
+*Note: OrcaSlicer 2.3.0 is out where this is fixed so this is now not necessary anymore*
 
 When printing single color on any toolhead other than T0, it still preheats T0 for some reason, and it does so multiple times so just setting it to 0° does not work for long. I worked around that by keeping track of the tools that are used in PRINT_START (see '#Register the tools used during print' above) and then check if the M104 call to heat a toolhead is in that list:
 ```gcode
