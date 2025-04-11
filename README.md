@@ -32,7 +32,7 @@ My build log is on Instagram as reels: [part 1](https://www.instagram.com/storie
 My steps to convert to stealthchanger are [here](journey-to-stealthchanger.md)
 
 ### Software additions
-
+ - Using the latest Armbian image instead of the BTT CB1 image as OS because it gets updates and has the latest kernel (was necessary for wifi adapter drivers) and CPU frequency governor support
  - [Klippain Shake&Tune](https://github.com/Frix-x/klippain-shaketune) (for belt comparison and input shaping)
  - [TMC Autotune](https://github.com/andrewmcgr/klipper_tmc_autotune) with everything set to performance because I had issues with 'silent' tuning
  - Exclude object
@@ -40,8 +40,8 @@ My steps to convert to stealthchanger are [here](journey-to-stealthchanger.md)
  - [Crowsnest](https://github.com/mainsail-crew/crowsnest) and [Moonraker Timelapse](https://github.com/mainsail-crew/moonraker-timelapse) (for webcam stream and timelapse gneneration)
  - [NanoMQ](https://nanomq.io/) running as a systemd service as a MQTT server, where a Sonoff pow R2 is posting power metrics to, and moonraker ingests those values
  - [udev-media-automount](https://github.com/Ferk/udev-media-automount) as a systemd service to auto mount USB sticks, a symlink is created to the gcodes folder so USB sticks are exposed on the klipperscreen for printing
-   
-
+ - Udev rule to always create a fixed symlink for the usb webcam, it sometimes was /dev/video0, sometimes /dev/video1 so with a udev rule it is now always /dev/webcam  
+ 
 ## BOM
 
 I try to keep track of a full bill of materials of the entire printer, so anything I add or remove gets updated in the BOM. You can find that [here](BOM.xslx)
