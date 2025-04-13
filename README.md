@@ -40,7 +40,7 @@ My steps to convert to stealthchanger are [here](journey-to-stealthchanger.md)
  - [Crowsnest](https://github.com/mainsail-crew/crowsnest) and [Moonraker Timelapse](https://github.com/mainsail-crew/moonraker-timelapse) (for webcam stream and timelapse gneneration)
  - [NanoMQ](https://nanomq.io/) running as a systemd service as a MQTT server, where a Sonoff pow R2 is posting power metrics to, and moonraker ingests those values
  - [udev-media-automount](https://github.com/Ferk/udev-media-automount) as a systemd service to auto mount USB sticks, a symlink is created to the gcodes folder so USB sticks are exposed on the klipperscreen for printing
- - Udev rule to always create a fixed symlink for the usb webcam, it sometimes was /dev/video0, sometimes /dev/video1 so with a udev rule it is now always /dev/webcam  
+ - @reboot script to always create a fixed symlink for the usb webcam, it sometimes was /dev/video0, sometimes /dev/video1 so with a udev rule it is now always /dev/webcam  
  
 ## BOM
 
