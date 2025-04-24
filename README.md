@@ -45,7 +45,18 @@ My steps to convert to stealthchanger are [here](journey-to-stealthchanger.md)
 ## BOM
 
 I try to keep track of a full bill of materials of the entire printer, so anything I add or remove gets updated in the BOM. You can find that [here](BOM.xslx)
+<details>
+  <summary>BOM overview</summary>
+  ![image](https://github.com/user-attachments/assets/a0657e18-70f7-4c30-828d-29cb2571f470)
+</details>
 
-![image](https://github.com/user-attachments/assets/a0657e18-70f7-4c30-828d-29cb2571f470)
+## Things I would change if I did a new build
 
+There are some things that I would do different now that I have built one and ran into several issues over the months
 
+ - Print parts out of ABS instead of eSun ABS+. eSun ABS+ used to be recommended but since they changed their formula layer adhesion and heat resistance is bad.
+ - Use an Octopus Pro board with a RPI4 instead of a M8P with CB1 that the Formbot came with. Unfortunately there is no option to choose that when ordering a new kit so I'd be stuck with it anyway, but the CB1 really is not powerful enough. A lot of TTCs and timing issues come down to host delays. It can be mitigated somewhat by using the latest kernel with armbian, setting up a performance CPU governor, adding nice to klipperscreen and other non essential processes and so on but all of this would be avoided if I could just use a RPI4. Being stuck with having to use a compute module for the M8P is really limiting the options for upgradability.
+ - Get a bigger 24v power supply, the default 200W that came with the kit is good for a single toolhead, but not so if you run multiple toolheads in a toolchanger. I got away with it with using 3 toolheads of varying sized heaters, 70,60 and 40W but there really is no more room to add another one.
+ - Use screw in magnets instead of glueing them in with CA glue. They keep popping out. 2 component epoxy might also work but ideally I want something that is more robust.
+ - Buy decent fans for the toolheads. The cheap ones are either obnoxiously loud or don't cool the hotend that well. Ideally I want fans with rpm monitoring to stop heating when the fan fails.
+ - Don't buy a Dragon HF hotend. It's really not worth the extra price when you can buy 4 Bambu like TZ2.0 V6 style hotends for the same price. Even the super cheap V6 clones work well.
