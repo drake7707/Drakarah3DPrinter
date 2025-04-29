@@ -4,7 +4,9 @@ Everything related to my 3D Printer
 
 ## Info
 
-The printer started of a Formbot kit and has been upgraded
+The printer started of a Formbot kit and has been upgraded.
+
+The printer is capable of printing multiple colors and multiple materials on a 350x350x340 build volume, except for the volume where the docks reside so it's more 350x250x340 and 350x350x100. It also has a cutter toolhead to cut vinyl sheets 
 
 The build steps for the full kit you can find [here](https://github.com/Zev-se/Formbot-voron-2.4-build-guide)
 
@@ -29,8 +31,11 @@ My build log is on Instagram as reels: [part 1](https://www.instagram.com/storie
     - [Mini BFI](https://github.com/DraftShift/StealthChanger/tree/main/UserMods/BT123/MiniBFI%20%2B%20MicroBFI) so the gantry clears the crossbar
     - [Docks](https://github.com/DraftShift/ModularDock) with crossbar
     - [N3MI exhaust panel](https://github.com/DraftShift/CableManagement/tree/main/UserMods/N3MI-DG/Umbilical_Plates) and [CAN box](https://www.printables.com/model/1119606-wago-can-distribution-box-for-n3mi-umbilical-plate) for multiple CAN cables instead of Galvanic mod
+  - Vinyl cutter toolhead
+    
+My steps to convert to StealthChanger are [here](journey-to-stealthchanger.md)
 
-My steps to convert to stealthchanger are [here](journey-to-stealthchanger.md)
+My steps to add a cutter toolhead are [here](journey-to-stealthcutter.md)
 
 ### Software additions
  - Using the latest Armbian image instead of the BTT CB1 image as OS because it gets updates and has the latest kernel (was necessary for wifi adapter drivers) and CPU frequency governor support
