@@ -6,7 +6,7 @@ The CoreXY motion system of a 3D printer can be used for other things, such as a
 
 ## Why
 
-A dedicated Cricut machine costs a lot for the same thing. I wanted to try out a cutting head, StealthChanger makes it really easy to swap toolheads, and see if I could cut vinyl, to use as stickers (no surface left untouched with this new power!)
+A dedicated Vinyl cutter machine costs a lot, adding a toolhead is maybe 20€. I wanted to try out a cutting head, StealthChanger makes it really easy to swap toolheads, and see if I could cut vinyl, to use as stickers (no surface left untouched with this new power!)
 
 ## Details
 
