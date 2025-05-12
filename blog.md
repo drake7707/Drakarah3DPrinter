@@ -34,3 +34,7 @@ One thing that was on my TODO list and I was very reluctant to do was to move th
 ![PXL_20250504_123323908](https://github.com/user-attachments/assets/7c71922b-db0e-4a27-80df-27e1bdac0c50)
 
 Everything still works, nothing blew up and it's a lot cleaner behind my printer now.
+
+# 2025-04-28 Cutting edge technology
+
+I finally got a cutter, details are [here](/journey-to-stealthcutter.md)
