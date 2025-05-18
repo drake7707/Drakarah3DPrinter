@@ -35,6 +35,7 @@ My build log is on Instagram as reels: [part 1](https://www.instagram.com/storie
     - [Docks](https://github.com/DraftShift/ModularDock) with crossbar
     - [N3MI exhaust panel](https://github.com/DraftShift/CableManagement/tree/main/UserMods/N3MI-DG/Umbilical_Plates) and [CAN box](https://www.printables.com/model/1119606-wago-can-distribution-box-for-n3mi-umbilical-plate) for multiple CAN cables instead of Galvanic mod
   - Vinyl cutter toolhead
+  - Filament rollers
     
 My steps to convert to StealthChanger are [here](journey-to-stealthchanger.md)
 
@@ -49,14 +50,15 @@ My steps to add a cutter toolhead are [here](journey-to-stealthcutter.md)
  - [Crowsnest](https://github.com/mainsail-crew/crowsnest) and [Moonraker Timelapse](https://github.com/mainsail-crew/moonraker-timelapse) (for webcam stream and timelapse gneneration)
  - [NanoMQ](https://nanomq.io/) running as a systemd service as a MQTT server, where a Sonoff pow R2 is posting power metrics to, and moonraker ingests those values
  - [udev-media-automount](https://github.com/Ferk/udev-media-automount) as a systemd service to auto mount USB sticks, a symlink is created to the gcodes folder so USB sticks are exposed on the klipperscreen for printing
- - @reboot script to always create a fixed symlink for the usb webcam, it sometimes was /dev/video0, sometimes /dev/video1 so with a udev rule it is now always /dev/webcam  
+ - @reboot script to always create a fixed symlink for the usb webcam, it sometimes was /dev/video0, sometimes /dev/video1 so with a udev rule it is now always /dev/webcam
+ - Mainsail [fork](https://github.com/fakcior/mainsail/releases) by fakcior for toolchanging and [toolmapping](https://github.com/fakcior/klipper-toolchanger-tool-mapping)
  
 ## BOM
 
-I try to keep track of a full bill of materials of the entire printer, so anything I add or remove gets updated in the BOM. You can find that [here](BOM.xslx)
+I try to keep track of a full bill of materials of the entire printer, so anything I add or remove gets updated in the BOM. You can find that [here](BOM.ods)
 <details>
   <summary>BOM overview</summary>
-  ![image](https://github.com/user-attachments/assets/a0657e18-70f7-4c30-828d-29cb2571f470)
+  ![image](https://github.com/user-attachments/assets/876b5364-e255-4b9d-9ea6-b020f880854d)
 </details>
 
 ## Things I would change if I did a new build
