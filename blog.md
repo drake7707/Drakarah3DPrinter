@@ -1,3 +1,14 @@
+# 2025-05-15 Some small updates
+
+I've done some small software updates, mainly for some quality of life:
+
+1. I've switched mainsail to the [fork](https://github.com/fakcior/mainsail) with toolchanger support by fakcior. This gives me a nice UI box per tool to activate,load and unload the filament. I could already do that on KlipperScreen but it's still kind of a hassle. Tool remapping is another big one, there is currently no way in OrcaSlicer to swap colors in a painted m3f model, which means I would need to swap the filaments to the tools according to the painted scheme. That's kind of dumb, luckily [this](https://github.com/fakcior/klipper-toolchanger-tool-mapping) allows for remapping the gcode before starting the print. It's still an extra step but at least it's possible now
+![431562327-bf8e2c3a-cb0d-4ef9-af06-b4f71f41f3fb](https://github.com/user-attachments/assets/206acbce-617c-41b2-b5d0-b77da5afed3c) (*screenshot from the repo*)
+
+2. I've changed some macro's here and there, nothing major, things like not disabling the motors on print end and moving to the nozzle brush before heating up to target temp so the ooze doesn't get dragged all over the bed.
+
+3. The filament rollers work pretty well, but sometimes it does snag hard enough on the roll that it yanks it off the roller sideways, I have added some filament guides to hopefully mitigate that
+
 # 2025-05-06 Vinyl stickers are cool
 
 ![PXL_20250506_115114144](https://github.com/user-attachments/assets/9b94b8a0-b46a-4e85-ba3e-b1c872203233)
