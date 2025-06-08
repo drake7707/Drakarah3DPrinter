@@ -1,3 +1,26 @@
+# 2025-06-08 Software updates and shenanigans
+
+I was still on the klipper-toolchanger commit from July 2024 and some improvements had been done recently to not have those false positive crash detection triggers anymore, I couldn't also update Klipper because the old version wouldn't be compatible so I took the plunge and updated everything.
+
+Unfortunately a lot had changed since in the gcode as well and nothing was documented, so I had to compare my gcode for picking up and dropping off tools with the newer version. Eventually I got it working, mostly.
+
+One issue I encountered was that the now split dropoff and pickup path was not correct for my Stealthchanger and Stealthburner tool heads, so I used the old path. That worked but not before ramming T0 at full speed into the bottom of the docks.
+
+This has unfortunately some consequences, or maybe it had to do with the update, I don't know, but T0 and T1 would not dock properly anymore. I had to recalibrate the dock and park position of the tools so it drops it nicely without moving and can pick it up without any jerkiness to the pins. This is really important because it would lead to sporadic docking/undocking issues.
+
+After that I noticed when starting a print that the crash protection now works differently and I had to put it a verify tool check in the after later gcode. I don't like this, this causes a delay on every layer change, so I will probably remove that check. Most if not all crashes happen during tool changing anyway.
+
+When I finally gotten a multi tool test  print done again I noticed my calibration was way waaay off, especially on T1. I did remove the nozzle and hotend at some point after a jam and didn't recalibrate.
+
+So I recalibrated, and then the magnet in the shuttle decided to come loose, as well with several pins from T0 due to the added friction of not having a magnet snap the tool in place. Sigh, this would have been a good time to use the two component epoxy I borrowed but apparently lost when I forgot to close the zipper of my bag. I ordered some from Amazon to replace that, but that meant I had to use super glue *again*, which means it will fail again in the near future.
+
+Getting the stupid magnet to sit flush in the shuttle is a pain when there's superflue underneath it. I seemed to have raised it a wee bit because T0 now had inconsistent probe trigger issues. It really never stops does it? Anyway, it was only T0, the others were fine, I loosened the Octotap, pushed it down as far as I could and tightened it again and that did the trick. I already did that on the other tools so I knew it was a good thing to try.
+
+So now I just have to calibrate the z-offset and gcode offset of every tool again, the new magnet location will have shifted things somewhat and then it should be good to go.
+
+I really want to do another multicolor print in a hopefully more reliable fashion but this ended up being a whole lot more work than I planned for.
+
+
 # 2025-05-15 Some small updates
 
 I've done some small software updates, mainly for some quality of life:
