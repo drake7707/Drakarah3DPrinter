@@ -1,3 +1,21 @@
+# 2025-06-10 Recalibration & print
+
+I managed to recalibrate the nozzles, my sexball probe is useless, it was way off, there's just too much play in the sexball probe shaft and bushing so I need to find a better way for calibration, I might try [Axiscope](https://github.com/nic335/Axiscope), which would be great for X,Y alignment and rather cheap. Z I can do easily with a test print. Anyway, after multiple test prints I got it dialed in properly.
+
+So I did a stress test print and the second attempt worked fine (I had some issues with my config of Tool mapping that nuked the first attempt):
+![PXL_20250609_154216659](https://github.com/user-attachments/assets/9ae4fd86-a5c9-4db7-ae2d-1f2310546ada)
+![PXL_20250609_154244922](https://github.com/user-attachments/assets/9b6c753b-308c-4e24-adf8-b25571ec3ee4)
+
+It came out nicely, I scaled up Calidragon by 200% so it was 352 tool changes and it worked flawlessly. It took 4h23min, mostly because my tool changes weren't super optimized to be fast.
+
+So I did that next, increased the Z speed to 200mm/s from 150mm/s, increased Z acceleration to 750mm/s² from 350mm/s². Optimized the pickup and dropoff gcode to use faster XY speeds (300mm/s), removed the M400 from the dropoff gcode that introduced a delay and removed the verify code on pickup as it gets verified after the pickup code runs anyway, it was there to bail out early before potentially dragging the tool off the dock. Bit of a risk but my tools have survived the dive to the bed before.
+
+And i've gotten it down to about 8 seconds for a tool change, it used to be around 15 seconds:
+
+[![Watch the video](https://img.youtube.com/vi/LBZMbHjzhpM/default.jpg)](https://youtu.be/LBZMbHjzhpM)
+
+It's really nice to see such a big improvement over my past multi color prints.
+
 # 2025-06-08 Software updates and shenanigans
 
 I was still on the klipper-toolchanger commit from July 2024 and some improvements had been done recently to not have those false positive crash detection triggers anymore, I couldn't also update Klipper because the old version wouldn't be compatible so I took the plunge and updated everything.
