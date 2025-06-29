@@ -1,3 +1,14 @@
+# 2025-06-29 Axiscope
+
+After the last recalibration I ordered the parts to try out Axiscope, basically aligning the tool nozzles visually with a camera. It was pretty cheap anyway, cheaper than a sexball probe and it works great. I had to solder 4 leds (I ordered leds that were too large so I had to drill the holes bigger) to the board, snapped it shut, glued in 2 magnets (4 really seemed overkill with N52) and it works well. The webpage to control the toolhead and measure the offset is pretty easy to use and I could do an entire calibration in a few minutes or less, much faster than the shenanigans I had with the sexball probe and probe that used a StealthChanger pin and bushing, no more going out of bounds, no more samples exceed tolerance, just align and bam done. My calibration was pretty spot on, they were already pretty well aligned, which meant that the values I got from the probe were not very accurate because that suggested over a mm change.
+
+Pretty happy with it, now I just need to change the sexball probe into a normal Z-endstop and set up Axiscope to use the probe for calibrating the Z-offsets.
+
+![PXL_20250629_163239899_preview](https://github.com/user-attachments/assets/56f14020-5662-4564-9183-f77696356acf)
+
+If you're unsure which tool calibration method to use, I heartily recommend this one.
+
+
 # 2025-06-10 Recalibration & print
 
 I managed to recalibrate the nozzles, my sexball probe is useless, it was way off, there's just too much play in the sexball probe shaft and bushing so I need to find a better way for calibration, I might try [Axiscope](https://github.com/nic335/Axiscope), which would be great for X,Y alignment and rather cheap. Z I can do easily with a test print. Anyway, after multiple test prints I got it dialed in properly.
