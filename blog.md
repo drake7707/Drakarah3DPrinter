@@ -8,6 +8,8 @@ Pretty happy with it, now I just need to change the sexball probe into a normal 
 
 If you're unsure which tool calibration method to use, I heartily recommend this one.
 
+Another thing I learned recently thanks to https://youtu.be/mkgGAVH_XZM is why my sexball probe and pin probe were so inaccurate no matter what I tried. I thought it was the tolerance of the pin and bushing but I never considered the concentricity of the nozzle orifice. I run very cheap nozzles so I doubt they are symmetrical and concentric at all, giving me a bias towards one side. Another reason why camera based alignment is so much better and easier, it takes out the guessing game of whether tolerances are good enough and doesn't rely on the quality of parts.
+
 
 # 2025-06-10 Recalibration & print
 
