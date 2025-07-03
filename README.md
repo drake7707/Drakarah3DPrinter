@@ -3,7 +3,8 @@ Everything related to my 3D Printer
 
 **[Blog](/blog.md)**
 
-![PXL_20250121_143938197](https://github.com/user-attachments/assets/7a34e96e-d045-4724-a5eb-55792791d2e9)
+![PXL_20250629_100435173_preview](https://github.com/user-attachments/assets/54e2abc7-83b6-4615-a268-2ca72ba1db9d)
+
 
 ## Info
 
