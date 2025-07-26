@@ -30,7 +30,9 @@ I also managed to snag a Fsyetc Hexa Distro Fusion board for an early bird deal,
 
 ![PXL_20250724_132922123_preview](https://github.com/user-attachments/assets/77a8bb25-8924-4a26-93d5-8a72f39c682e)
 
-It's a very new board and there isn't a proper mount for it yet, so I took the time to redesign a new backpage to hold it in place.
+It's a very new board and there isn't a proper mount for it yet, so I took the time to redesign a new backpack to hold it in place.
+
+![PXL_20250726_152013076_preview](https://github.com/user-attachments/assets/d21e8d54-7f8a-4319-85d7-d37324cc2b25)
 
 One of the other issues I had was filament breaking in the bowden tubes at certain points because the filament was under stress, especially the cheap PLA is very prone to that, so I really want to reroute the bowden tubes to have as little sharp bends as possible, I bought 10m so I can cut them to length and use 2m instead of 1m to make a gentle path towards the spools.
 
