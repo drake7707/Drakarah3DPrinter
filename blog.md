@@ -1,3 +1,42 @@
+# 2025-07-26 Summer upgrades
+
+With the Aliexpress summer sales I bought enough stuff to build a 4th and 5th toolhead. This time around I wanted to build the 4th toolhead as a [FilamAtrix](https://github.com/thunderkeys/FilamATrix) toolhead with cutter and runout sensor built in. 
+
+![PXL_20250717_131254119_preview](https://github.com/user-attachments/assets/95d5cc46-32b0-472a-8732-1e49d7f059ad)
+
+This ended up not being so straightforward. The v6 mount is not supported by FilamAtrix, so I used the one from Filametrix, but that also meant I had to cut the blade differently (I could not cut the hardened steel blade, instead I bent until it shattered in roughly the correct spot) so it rests on the lip of the heat sink and I had to add a sleeve with PTFE tube and a chamfer cut with an exacto knife. That seemed to work alright. 
+
+![PXL_20250726_083201591_preview](https://github.com/user-attachments/assets/52dbe668-0c39-41e1-959d-567415733a3d)
+
+The filament runout sensors also were not easy to install. The ball bearings are exactly 5.5mm so that wasn't the problem, but the holes in the switches did not line up with the holes to mount them. If I did force screws through they would be too close and be always triggered. I ended up fiddling with it, adding some tape to the front, drilling out a hole on the other so I could get it to the position where it reliably triggered/not triggered when I added/removed filament.
+
+Another issue I had was I had to add spacers for the Octotap as the extruder motor is a lot taller than the ones I bought previously
+
+![PXL_20250719_090806072_preview](https://github.com/user-attachments/assets/4b6abf2f-01b9-4f5d-8e7e-17270e2d77ea)
+
+It still triggers correctly so not a big deal.
+
+I forgot how long it took to trim wires to length and crimp connectors, but in the end I have a new toolhead.
+
+![PXL_20250719_121814919_preview](https://github.com/user-attachments/assets/18731045-3c4c-490e-88e8-fc1ba1f69f3b)
+
+One of the other things I wanted to tackle at the same time was redoing my umbilicals with spring steel. I used piano wire before and they were very sloppy. So I printed the umbilicals v2 exhaust plate from N3mi, detached everything, removed all the cables, and rebuilt the umbilicals, this time with proper PG7 glands on T0 and T1 too so they screwed in snugly, the ones I had from Formbot had a different pitch or out of spec tolerances and it just didn't sit well in the exhaust plate, that also caused a lot of sloppiness.
+
+![PXL_20250723_124743320_preview](https://github.com/user-attachments/assets/32cb7ba5-9029-4dca-a172-74ccbf3ff3e7)
+
+Pretty happy with that, they look a lot better and hold their form a lot better.
+
+I also managed to snag a Fsyetc Hexa Distro Fusion board for an early bird deal, it's a distribution board for both CAN and USB toolheads but also has a dedicated chip with lots of GPIO. That means I can add a lot more sensors directly to that board instead of having to route everything to the electronics bay.
+
+![PXL_20250724_132922123_preview](https://github.com/user-attachments/assets/77a8bb25-8924-4a26-93d5-8a72f39c682e)
+
+It's a very new board and there isn't a proper mount for it yet, so I took the time to redesign a new backpage to hold it in place.
+
+One of the other issues I had was filament breaking in the bowden tubes at certain points because the filament was under stress, especially the cheap PLA is very prone to that, so I really want to reroute the bowden tubes to have as little sharp bends as possible, I bought 10m so I can cut them to length and use 2m instead of 1m to make a gentle path towards the spools.
+
+
+It's still a work in progress in the end the printer will be a lot better, it's the small things.
+
 # 2025-06-29 Axiscope
 
 After the last recalibration I ordered the parts to try out Axiscope, basically aligning the tool nozzles visually with a camera. It was pretty cheap anyway, cheaper than a sexball probe and it works great. I had to solder 4 leds (I ordered leds that were too large so I had to drill the holes bigger) to the board, snapped it shut, glued in 2 magnets (4 really seemed overkill with N52) and it works well. The webpage to control the toolhead and measure the offset is pretty easy to use and I could do an entire calibration in a few minutes or less, much faster than the shenanigans I had with the sexball probe and probe that used a StealthChanger pin and bushing, no more going out of bounds, no more samples exceed tolerance, just align and bam done. My calibration was pretty spot on, they were already pretty well aligned, which meant that the values I got from the probe were not very accurate because that suggested over a mm change.
