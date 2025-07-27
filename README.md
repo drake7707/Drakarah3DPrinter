@@ -62,7 +62,7 @@ I try to keep track of a full bill of materials of the entire printer, so anythi
   ![image](https://github.com/user-attachments/assets/876b5364-e255-4b9d-9ea6-b020f880854d)
 </details>
 
-## Things I would change if I did a new build
+## Lessons learned and things I would change if I did a new build
 
 There are some things that I would do different now that I have built one and ran into several issues over the months
 
@@ -75,3 +75,5 @@ There are some things that I would do different now that I have built one and ra
  - The EBB36 toolhead board is half the price as a SB2209 and works just as well. The terminal block kind of sucks compared to the molex connector for the heater and there is no easy 5V/12V fan option but the price makes up for it. It's also not limited to just the StealthBurner toolhead.
  - Speaking of toolheads, the stealthburner looks good but there are more lightweight and more compact toolheads available. Anthead is popular for StealthChanger builds.
  - Don't buy a Dragon HF hotend. It's really not worth the extra price when you can buy 4 Bambu like TZ2.0 V6 style hotends for the same price. Even the super cheap V6 clones work well.
+ - Buy 10m PTFE tube instead of the cheaper 1m, it's so much nicer to just have enough PTFE tube that bends are relaxed. So many issues I had with underextrusion and PLA filament snapping under stress was due to tight bends or pinched points in the bowden tube.
+   
