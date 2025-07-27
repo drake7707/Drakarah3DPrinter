@@ -1,3 +1,4 @@
+
 # 2025-07-26 Summer upgrades
 
 With the Aliexpress summer sales I bought enough stuff to build a 4th and 5th toolhead. This time around I wanted to build the 4th toolhead as a [FilamAtrix](https://github.com/thunderkeys/FilamATrix) toolhead with cutter and runout sensor built in. 
@@ -38,6 +39,14 @@ One of the other issues I had was filament breaking in the bowden tubes at certa
 
 
 It's still a work in progress in the end the printer will be a lot better, it's the small things.
+
+# 2025-07-10 Sun exposure
+
+I put my printer in my office room on a spot that received a lot of sunlight. I thought the free heating for the chamber would be nice, but now that it's summer the UV is a lot higher and my ABS parts are suffering, I didn't realize how much they have become bleached until I printed a new part and held it next to an older part.
+
+![PXL_20250710_134234707_preview](https://github.com/user-attachments/assets/4c7098cd-9361-4a48-b302-e3b8dbf642ed)
+
+Yikes. Needless to say I moved some things around.
 
 # 2025-06-29 Axiscope
 
