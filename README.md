@@ -76,4 +76,4 @@ There are some things that I would do different now that I have built one and ra
  - Speaking of toolheads, the stealthburner looks good but there are more lightweight and more compact toolheads available. Anthead is popular for StealthChanger builds.
  - Don't buy a Dragon HF hotend. It's really not worth the extra price when you can buy 4 Bambu like TZ2.0 V6 style hotends for the same price. Even the super cheap V6 clones work well.
  - Buy 10m PTFE tube instead of the cheaper 1m, it's so much nicer to just have enough PTFE tube that bends are relaxed. So many issues I had with underextrusion and PLA filament snapping under stress was due to tight bends or pinched points in the bowden tube.
-   
+ - Don't put your printer on a spot that has a lot of sunlight. Yes the free heating is nice, but ABS parts really don't like UV and mine significantly bleached after only a couple of months.
