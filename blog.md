@@ -1,4 +1,33 @@
 
+# 2025-08-05 Finishing up & toolless homing
+
+I've finished building the remaining toolhead and routing all the umbilicals and bowden tubes properly. Even put some numbers on the toolheads and filament inlets to keep track of which one is which
+
+![PXL_20250804_173238952_preview](https://github.com/user-attachments/assets/d98841a0-c23f-43d7-b2c6-b5186ec76e5b)
+
+The bowden tubes are slightly less than 2m long, which I hope isn't going to introduce too much friction but it does look a lot nicer and has a lot less bends in it.
+
+![PXL_20250727_120601292_preview](https://github.com/user-attachments/assets/71bdb8c4-f720-4fe0-aa6d-d20441f0a7d7)
+
+![PXL_20250731_151751206](https://github.com/user-attachments/assets/1e5db9b8-527f-4d7c-8e11-d8db4c1e5c02)
+
+I've also spent some time getting toolless homing to work. It looks a lot nicer when all the tools are parked in their docks but the toolchanger software didn't allow for shuttle only homing
+
+[![Watch the video](https://img.youtube.com/G2TRkZCBAtQ/default.jpg)](https://youtube.com/shorts/G2TRkZCBAtQ)
+
+I had to do a couple of things: 
+
+1. Make a Z-endstop that the shuttle could reach but doesn't interfere when tools are on the shuttle ![PXL_20250803_063140733_preview](https://github.com/user-attachments/assets/7a0ac8c0-486b-443a-8cf0-53760b14aa77)
+
+2. Define a [tool_probe] with a negative tool number for the endstop
+   
+2. Make a small patch in klipper-toolchanger to allow multiple probes not triggered if one of the probes is from a negative probe (because the endstop will always be not triggered)
+
+3. Adjust the homing sequence to check if there is a tool or not and home X,Y then move to the endstop and home Z for shuttle only.
+
+It works fairly well and I can pick up tools without an issue.
+
+
 # 2025-07-26 Summer upgrades
 
 With the Aliexpress summer sales I bought enough stuff to build a 4th and 5th toolhead. This time around I wanted to build the 4th toolhead as a [FilamAtrix](https://github.com/thunderkeys/FilamATrix) toolhead with cutter and runout sensor built in. 
