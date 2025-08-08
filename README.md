@@ -38,6 +38,7 @@ My build log is on Instagram as reels: [part 1](https://www.instagram.com/storie
     - [N3MI exhaust panel](https://github.com/DraftShift/CableManagement/tree/main/UserMods/N3MI-DG/Umbilical_Plates) and [CAN box](https://www.printables.com/model/1119606-wago-can-distribution-box-for-n3mi-umbilical-plate) for multiple CAN cables instead of Galvanic mod
     - [Axiscope](https://github.com/nic335/Axiscope) with hartk sexbolt for easy inter-tool nozzle offset calibration
   - Vinyl cutter toolhead
+  - [The Filter](https://www.printables.com/model/334276-the-filter-for-voron-24) with side bed filters (instead of Nevermore) (the screw in remix)
   - [Filament rollers](https://www.printables.com/model/73636-filament-spool-roller-w-608-bearings)
   - [FilamAtrix toolheads](https://github.com/thunderkeys/FilamATrix) (ECAS inlet, filament runout sensors and filament cutter integration)
   
@@ -81,3 +82,6 @@ There are some things that I would do different now that I have built one and ra
  - Don't buy a Dragon HF hotend. It's really not worth the extra price when you can buy 4 Bambu like TZ2.0 V6 style hotends for the same price. Even the super cheap V6 clones work well.
  - Buy 10m PTFE tube instead of the cheaper 1m, it's so much nicer to just have enough PTFE tube that bends are relaxed. So many issues I had with underextrusion and PLA filament snapping under stress was due to tight bends or pinched points in the bowden tube.
  - Don't put your printer on a spot that has a lot of sunlight. Yes the free heating is nice, but ABS parts really don't like UV and mine significantly bleached after only a couple of months.
+ - Anything that is loose will rattle loudly during printing and annoy you. The Filter lids are slide in lids and not tight enough to not rattle, some superglue fixed that. The Clicky clack door panel also needed some extra panel or it would rattle in its extrusions. Test for rattle during assembly.
+ - Pull on your dang crimps after crimping. If they come off it was a bad crimp and can cause intermittent connection issues. I've made some bad crimps and the thermistor dipped and caused prints to fail. Having to disassemble to recrimp is no fun, test during assembly.
+   
