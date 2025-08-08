@@ -36,9 +36,11 @@ My build log is on Instagram as reels: [part 1](https://www.instagram.com/storie
     - [Mini BFI](https://github.com/DraftShift/StealthChanger/tree/main/UserMods/BT123/MiniBFI%20%2B%20MicroBFI) so the gantry clears the crossbar
     - [Docks](https://github.com/DraftShift/ModularDock) with crossbar
     - [N3MI exhaust panel](https://github.com/DraftShift/CableManagement/tree/main/UserMods/N3MI-DG/Umbilical_Plates) and [CAN box](https://www.printables.com/model/1119606-wago-can-distribution-box-for-n3mi-umbilical-plate) for multiple CAN cables instead of Galvanic mod
+    - [Axiscope](https://github.com/nic335/Axiscope) with hartk sexbolt for easy inter-tool nozzle offset calibration
   - Vinyl cutter toolhead
   - [Filament rollers](https://www.printables.com/model/73636-filament-spool-roller-w-608-bearings)
   - [FilamAtrix toolheads](https://github.com/thunderkeys/FilamATrix) (ECAS inlet, filament runout sensors and filament cutter integration)
+  
     
 My steps to convert to StealthChanger are [here](journey-to-stealthchanger.md)
 
