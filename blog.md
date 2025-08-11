@@ -34,11 +34,13 @@ With the Aliexpress summer sales I bought enough stuff to build a 4th and 5th to
 
 ![PXL_20250717_131254119_preview](https://github.com/user-attachments/assets/95d5cc46-32b0-472a-8732-1e49d7f059ad)
 
-This ended up not being so straightforward. The v6 mount is not supported by FilamAtrix, so I used the one from Filametrix, but that also meant I had to cut the blade differently (I could not cut the hardened steel blade, instead I bent until it shattered in roughly the correct spot) so it rests on the lip of the heat sink and I had to add a sleeve with PTFE tube and a chamfer cut with an exacto knife. That seemed to work alright. 
+This ended up not being so straightforward. The v6 mount is not supported by FilamAtrix, so I used the one from Filametrix, but that also meant I had to cut the blade differently (I could not cut the hardened steel blade, instead I bent until it shattered in roughly the correct spot) so it rests on the lip of the heat sink and I had to add a sleeve with PTFE tube and a chamfer cut with an exacto knife. That seemed to work alright. I also had to chafe off part of the extruder housing because the clone V6's stick out 1 mm and it clamped the knife down when assembled so cutting away some plastic gave it some room to cut without any friction.
 
 ![PXL_20250726_083201591_preview](https://github.com/user-attachments/assets/52dbe668-0c39-41e1-959d-567415733a3d)
 
 The filament runout sensors also were not easy to install. The ball bearings are exactly 5.5mm so that wasn't the problem, but the holes in the switches did not line up with the holes to mount them. If I did force screws through they would be too close and be always triggered. I ended up fiddling with it, adding some tape to the front, drilling out a hole on the other so I could get it to the position where it reliably triggered/not triggered when I added/removed filament.
+
+I found the best way was to add some layers of tape on the switch and then screw in the self tapping screws with an angle, that seemed to work very consistently across multiple toolheads.
 
 Another issue I had was I had to add spacers for the Octotap as the extruder motor is a lot taller than the ones I bought previously
 
