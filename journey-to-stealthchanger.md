@@ -117,6 +117,9 @@ Unfortunately it didn't do much for keeping the chamber temperature high for ABS
 
 ### 7. Umbilicals and CAN wiring
 
+*Update: I have redone the umbical wiring with spring steel (a lot better than piano wire) as well as routing of the PTFE tubes and used a distribution board with a different backpack, read about it [here](https://github.com/drake7707/Drakarah3DPrinter/blob/main/blog.md#2025-07-26-summer-upgrades). I'll leave the old write up below but be aware it's not up to date anymore.*
+
+
 For the actual umbilicals I bought some 1mm spring steel piano wire and used 2 of them next to the CAN cable to provide enough rigidity. A 3mm spring steel strip is recommended nowadays but I didn't have that so I tried to mimic it as best as I could. I used some tape to hold them in place and used some sleeving over it. The first umbilical I didn't put the piano wire all the way to the toolhead and I feel that was a mistake, it bent and pushed the toolhead backwards on the dock. When I extended the piano wire all the way to the toolhead (I use PUG instead of PG7) that worked much better for staying in the docks.
 
 One thing I had to make sure was that the natural curl the piano wires wanted to make aligned with the arc that I wanted the umbilical to make, so i had to clamp them down at the toolhead in the PUG in exactly the right orientation and the same at the PG7 gland at the exhaust.
