@@ -11,7 +11,7 @@ Everything related to my 3D Printer
 
 The printer started of a Formbot kit and has been upgraded.
 
-The printer is capable of printing multiple colors and multiple materials on a 350x350x340 build volume, except for the volume where the docks reside so it's more 350x250x340 and 350x350x100. It also has a cutter toolhead to cut vinyl sheets 
+The printer is capable of printing multiple colors and multiple materials on a 350x350x340 build volume, except for the volume where the docks reside so it's more 350x250x340 and 350x350x100. It also has a cutter toolhead to cut vinyl sheets.
 
 The build steps for the full kit you can find [here](https://github.com/Zev-se/Formbot-voron-2.4-build-guide)
 
@@ -29,18 +29,20 @@ My build log is on Instagram as reels: [part 1](https://www.instagram.com/storie
  - [Handles by 1-0-R](https://mods.vorondesign.com/details/xa84lhUN5aMX4nmfZquaQ) with [spacer](https://www.printables.com/model/1098129-top-hat-spacer-for-voron-handle-by-1-0-r) so I can lift and tilt the printer more easily
  - [Wiper nozzle (Bambu style)](https://www.printables.com/model/1054455-voron-24-nozzle-brush-using-bambu-labs-a1-silicon) which is really important as a non clean nozzle will affect probing and thus Z-offset
  - [Stealthchanger](https://github.com/DraftShift/StealthChanger)
-    - Top hat
-    - Extra toolheads
+    - Top hat to make room for the umbilicals and retain full enclosure
+    - Extra Stealthburner toolheads
     - Fysetc Hexa distro fusion board with backpack for CAN distribution
     - Shuttle instead of TAP
     - [Mini BFI](https://github.com/DraftShift/StealthChanger/tree/main/UserMods/BT123/MiniBFI%20%2B%20MicroBFI) so the gantry clears the crossbar
     - [Docks](https://github.com/DraftShift/ModularDock) with crossbar
     - [N3MI exhaust panel v2](https://github.com/DraftShift/CableManagement/tree/main/UserMods/N3MI-DG/Umbilical_plates_V2) and [Fsyetc hexa distro backpack](https://www.printables.com/model/1366367-fysetc-hexa-distro-fusion-backpack) for CAN cable distribution (and USB hub)
     - [Axiscope](https://github.com/nic335/Axiscope) with hartk sexbolt for easy inter-tool nozzle offset calibration
+    - 450W Meanwell power supply to replace the Formbot 200W one to make sure all toolheads can be heated at the same time
   - Vinyl cutter toolhead
-  - [The Filter](https://www.printables.com/model/334276-the-filter-for-voron-24) with side bed filters (instead of Nevermore) (the screw in remix)
+  - [The Filter](https://www.printables.com/model/334276-the-filter-for-voron-24) with side bed filters (instead of Nevermore) (the screw-in remix)
   - [Filament rollers](https://www.printables.com/model/73636-filament-spool-roller-w-608-bearings)
   - [FilamAtrix toolheads](https://github.com/thunderkeys/FilamATrix) (ECAS inlet, filament runout sensors and filament cutter integration)
+  - Replaced the formbot LED bar with [LED bars](https://aliexpress.com/item/1005003166484007.html) that were easily cuttable to size to improve even lighting and remove shadows
   
     
 My steps to convert to StealthChanger are [here](journey-to-stealthchanger.md)
