@@ -35,7 +35,7 @@ My build log is on Instagram as reels: [part 1](https://www.instagram.com/storie
     - Shuttle instead of TAP
     - [Mini BFI](https://github.com/DraftShift/StealthChanger/tree/main/UserMods/BT123/MiniBFI%20%2B%20MicroBFI) so the gantry clears the crossbar
     - [Docks](https://github.com/DraftShift/ModularDock) with crossbar
-    - [N3MI exhaust panel](https://github.com/DraftShift/CableManagement/tree/main/UserMods/N3MI-DG/Umbilical_Plates) and [CAN box](https://www.printables.com/model/1119606-wago-can-distribution-box-for-n3mi-umbilical-plate) for multiple CAN cables instead of Galvanic mod
+    - [N3MI exhaust panel v2](https://github.com/DraftShift/CableManagement/tree/main/UserMods/N3MI-DG/Umbilical_plates_V2) and [Fsyetc hexa distro backpack](https://www.printables.com/model/1366367-fysetc-hexa-distro-fusion-backpack) for CAN cable distribution (and USB hub)
     - [Axiscope](https://github.com/nic335/Axiscope) with hartk sexbolt for easy inter-tool nozzle offset calibration
   - Vinyl cutter toolhead
   - [The Filter](https://www.printables.com/model/334276-the-filter-for-voron-24) with side bed filters (instead of Nevermore) (the screw in remix)
