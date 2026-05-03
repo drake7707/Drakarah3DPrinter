@@ -3,7 +3,7 @@ Everything related to my 3D Printer
 
 **[Blog](/blog.md)**
 
-![PXL_20250808_152049643_preview](https://github.com/user-attachments/assets/e11af304-4bc9-49c3-a0b0-36fcd5df3c11)
+<img width="1440" height="1920" alt="PXL_20260503_095724243_preview" src="https://github.com/user-attachments/assets/00dad639-ea30-454f-b916-b4dacb191e6a" />
 
 
 
@@ -43,7 +43,7 @@ My build log is on Instagram as reels: [part 1](https://www.instagram.com/storie
   - [Filament rollers](https://www.printables.com/model/73636-filament-spool-roller-w-608-bearings)
   - [FilamAtrix toolheads](https://github.com/thunderkeys/FilamATrix) (ECAS inlet, filament runout sensors and filament cutter integration)
   - Replaced the formbot LED bar with [LED bars](https://aliexpress.com/item/1005003166484007.html) that were easily cuttable to size to improve even lighting and remove shadows
-  
+  - [CW2 Filament feeders](https://www.printables.com/model/1709031-clockwork2-filament-feeders), with Fly D5 control board in a [backpack](https://www.printables.com/model/1709021-fly-d5-side-backpack) and [Annex belays](https://www.printables.com/model/1709023-annex-belay-array-mount) to keep extruders in sync
     
 My steps to convert to StealthChanger are [here](journey-to-stealthchanger.md)
 
