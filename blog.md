@@ -32,6 +32,8 @@ So moral of the story: don't use cheap USB cables, don't use cheap USB hubs, the
 
 I've also bought ferrite chokes but didn't receive them yet. I'll add them to all cables and also all CAN cables to hopefully supress noise from motors and other induction sources, to reduce the CAN errors further. Considering the CAN bus is differential I doubt it's going to matter much but if it drops the noise floor it should help.
 
+While I was in the e-bay (I really did not look forward to flipping the ever increasingly heavy and tall printer) I also cleaned up some wire mess and added an extra fan. I'm running the 24v 6020 fans on 12v and always on at 50% while the printer is on and 100% while the printer is active. Idle they are barely hearable and it keeps airflow going over the CB1 and M8P, which is important because the CB1 comes very close to thermal throttling if fans aren't running + the 450W PSU starts its own very noisy fan when the temperature gets too warm, now it doesn't with the fans providing some airflow.
+
 # 2025-08-05 Finishing up & toolless homing
 
 I've finished building the remaining toolhead and routing all the umbilicals and bowden tubes properly. Even put some numbers on the toolheads and filament inlets to keep track of which one is which
