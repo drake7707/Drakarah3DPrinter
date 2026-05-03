@@ -1,3 +1,36 @@
+# 2026-05-03 Clockwork 2 filament feeders
+
+The long filament path has been annoying me, I had underextrusion issues from time to time, mostly with ABS and I suspected the nearly 2 meters of PTFE tubes to be the cause, mostly because when they were shorter I never had that issue.
+
+So I decided to make filament feeders. There isn't really a specific project or guide for it so I just chose to make some CW2 with a modded ECAS04 at the bottom. Then I bought a very cheap 5 motor control board, a Fly D5 with cheap TMC2209s to control the motors. Finally I also added Annex Belays to make sure the extruders stay synchronized, so one doesn't starve the other of filament or one doesn't push too much filament.
+
+It took a while because I had to make mounts, covers, print everything, solder everything and make compatible connectors for the board but once everything was assembled it works well.
+
+I tried to do proper cable management because that's 20 wires for the motors, 5+1 wires for the filament sensors in the CW2 (I daisy chained the ground) and 5+1 wires for the belay microswitches. It became a mess of cables quickly so I bought some cable shroud and made some cable clips to route it along the extrusion.
+
+<img width="1440" height="1920" alt="PXL_20260503_085024953_preview" src="https://github.com/user-attachments/assets/aa70c234-2b7a-4158-98e2-163fb63f5f59" />
+
+<img width="1440" height="1920" alt="PXL_20260503_085055577_preview" src="https://github.com/user-attachments/assets/10c01c8b-d681-4f5e-a113-8db2a9528df2" />
+
+<img width="1440" height="1920" alt="PXL_20260503_084830665_preview" src="https://github.com/user-attachments/assets/656aeb9c-9efa-4c11-ad67-7608618e1002" />
+
+<img width="1440" height="1920" alt="PXL_20260502_183926045_preview" src="https://github.com/user-attachments/assets/56cbb213-dc70-4256-be48-d2ec9733b89a" />
+
+<img width="1440" height="1920" alt="PXL_20260502_184737862_preview" src="https://github.com/user-attachments/assets/a2141b40-20c9-45ac-876b-d32881fca9eb" />
+
+
+
+# 2026-05-03 Debugging the occasional lost communication
+
+I haven't really used my 3D printer a lot lately, but when I did print something I had the random "Lost communication with the MCU". Tracing the issue proved tricky with just klippy.log so I imported the mcu and CAN bus stats in home assistant to track bytes_invalid and retransmits and CAN errors over time. I also made a standalone [dashboard](https://github.com/drake7707/klipper-comm-tracking) that you can use. That shed some light on things that shouldn't be there, for example T0 and T1 have slowly increasing bytes_invalid and bytes_retransmit. I'm chalking that down to SB2209s shitty CAN transceivers, that refuse to work with a proper CAN bus and require an extra termination resistor. But I also saw increasing CAN TX errors on the hexaboard and considering that's also the USB to CAN board I suspected the board next or the cables leading up to it.
+
+I could luckily (?) reproduce comms issues when I heated all the toolheads at the same time. The hexaboard errors spike and it loses communication immediately. Interestingly when I disabled crowsnest and thus removed the webcam from the equation it worked. This definitely pointed towards USB cabling issues and not the hexaboard itself, the webcam isn't even connected to the hexaboard but to the M8P. I tried using an USB extension cable routed from the front keystone to the hexaboard and it got way worse, those were cheap usb cable extenders for mice/keyboards so no surprise there.
+
+I luckily also had a decent USB3.2 A to C cable I bought as a spare and it's much thicker while shorter than the cable I used for the hexaboard. I replaced it and things worked fine with the webcam still enabled, no more increasing hexaboard TX errors either. The cable tip is molded bigger so I tried using a 90° USB C to C adapter and that immediately caused the issues to come back. So what I think is happening is that the USB C connector of the hexaboard has too much play with cheaper cables. When I jostled the USB cable I saw the hexaboard disconnect so that was likely the culprit. The USB3.2 cable has a better male connector that connects better so I kept that one, redid the back umbilical with that cable, had to pull out the keystone because it was juuuust too short to reach the electronics bay but hey whatever.
+
+So moral of the story: don't use cheap USB cables, don't use cheap USB hubs, they will work but they will also cause intermittent issues that's not a problem for most devices but for time critical elements it is better not to cheap out. Don't even use the provided USB cables that come with the boards, use known reliable ones and it'll save you a lot of headaches.
+
+I've also bought ferrite chokes but didn't receive them yet. I'll add them to all cables and also all CAN cables to hopefully supress noise from motors and other induction sources, to reduce the CAN errors further. Considering the CAN bus is differential I doubt it's going to matter much but if it drops the noise floor it should help.
 
 # 2025-08-05 Finishing up & toolless homing
 
