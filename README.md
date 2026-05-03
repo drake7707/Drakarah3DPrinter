@@ -86,4 +86,6 @@ There are some things that I would do different now that I have built one and ra
  - Don't put your printer on a spot that has a lot of sunlight. Yes the free heating is nice, but ABS parts really don't like UV and mine significantly bleached after only a couple of months.
  - Anything that is loose will rattle loudly during printing and annoy you. The Filter lids are slide in lids and not tight enough to not rattle, some superglue fixed that. The Clicky clack door panel also needed some extra panel or it would rattle in its extrusions. Test for rattle during assembly.
  - Pull on your dang crimps after crimping. If they come off it was a bad crimp and can cause intermittent connection issues. I've made some bad crimps and the thermistor dipped and caused prints to fail. Having to disassemble to recrimp is no fun, test during assembly.
+ - Don't use cheap USB hubs or usb cables that come with boards. The USB A to C cable I used with the hexaboard caused issues, causing very sporadic lost communication issues (or immediate when heating up all toolheads at the same time). I replaced the cable with a USB3.2 branded one that's likely shielded and much thicker and those issues were fixed.
+
    
