@@ -9,7 +9,12 @@ It used to be fine, but as I added more toolheads and the Fly D5 board the CAN b
 
 I got so fed up with it, a CAN bus that's unstable can ruin a print several hours in, I didn't want to risk long prints anymore. So I bought an EBB36 and replaced the entire T1 toolhead SB2209 and SB0000 board, similar how T2,T3 and T4 work. I had to do several hours of recrimping, extending wires, creating a new umbilical for T1 (it's a microfit connector and not a 2+2 whatever SB2209 uses). Thankfully I still had everything on hand, had spare cabling and wires and 5 hours later I have exactly the same printer in hopefully a better stable CAN state.
 
-It's printing the toolhead cage for T1 on T1 with the new wiring to test the CAN bus and test T1 stability. Let's see how it holds up for an hour.
+And after printing the toolhead cage for T1 on T1 with the new wiring to test the CAN bus and test T1 stability there are 0 errors, 0 bytes invalid, 0 bytes retransmit for an 90 minutes of printing:
+
+<img width="1520" height="373" alt="image" src="https://github.com/user-attachments/assets/0d4f6ed7-806f-4b21-b429-85b5b40043b3" />
+
+So I can finally call this fixed.
+
 
 # 2026-05-03 Clockwork 2 filament feeders
 
