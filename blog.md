@@ -7,7 +7,7 @@ After doing all the CAN cable recrimping I thought I finally had solved it but n
 
 It used to be fine, but as I added more toolheads and the Fly D5 board the CAN bus gets increasingly chatty, increasingly stubby with more reflections and it caused a lot of issues. With just T0 and T1 the CAN bus was far more stable.
 
-I got so fed up with it, a CAN bus that's unstable can ruin a print several hours in, I didn't want to risk long prints anymore. So I bought an EBB36 and replaced the entire T1 toolhead SB2209 and SB0000 board with an EBB36, similar how T2,T3 and T4 work. I had to do several hours of recrimping, extending wires, creating a new umbilical for T1 (it's a microfit connector and not a 2+2 whatever SB2209 uses). Thankfully I still had everything on hand, had spare cabling and wires and 5 hours later I have exactly the same printer in hopefully a better stable CAN state.
+I got so fed up with it, a CAN bus that's unstable can ruin a print several hours in, I didn't want to risk long prints anymore. So I bought an EBB36 and replaced the entire T1 toolhead SB2209 and SB0000 board, similar how T2,T3 and T4 work. I had to do several hours of recrimping, extending wires, creating a new umbilical for T1 (it's a microfit connector and not a 2+2 whatever SB2209 uses). Thankfully I still had everything on hand, had spare cabling and wires and 5 hours later I have exactly the same printer in hopefully a better stable CAN state.
 
 It's printing the toolhead cage for T1 on T1 with the new wiring to test the CAN bus and test T1 stability. Let's see how it holds up for an hour.
 
