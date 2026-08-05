@@ -1,3 +1,14 @@
+# 2026-08-05 CAN bus instability
+
+A couple of months ago I struggled with lost communication. That hasn't happened anymore (touch wood) but I did still see the bytes invalid, bytes retransmit and CAN RX and TX errors creeping up steadily:
+<img width="1280" height="309" alt="image" src="https://github.com/user-attachments/assets/67dc90b6-e44e-43cc-8b13-184dc26c88d9" />
+
+After doing all the CAN cable recrimping I thought I finally had solved it but nope. The screenshot above was while T1 was printing, note how T0 gets bytes_invalid from messages to T1. SB2209s are a pain the ass, don't use them in a stealthchanger. With 2 SB2209s I had to put 3 termination resistors in dropping the resistance between CAN L and CAN H to 48ohms instead of the 60ohms it should be, reducing the margin for noise, with just 2 the second SB2209 just refused to connect. It's been a pain in the ass to get the CAN bus working properly with 2 SB2209s and I suspect a lot of the CAN instability comes from having 2. I don't know what CAN transceiver shenanigans it pulls but I have none of that with the EBB36s.
+
+I got so fed up with it, a CAN bus that's unstable can ruin a print several hours in, I didn't want to risk long prints anymore. So I bought an EBB36 and replaced the entire T1 toolhead SB2209 and SB0000 board with an EBB36, similar how T2,T3 and T4 work. I had to do several hours of recrimping, extending wires, creating a new umbilical for T1 (it's a microfit connector and not a 2+2 whatever SB2209 uses). Thankfully I still had everything on hand, had spare cabling and wires and 5 hours later I have exactly the same printer in hopefully a better stable CAN state.
+
+It's printing the toolhead cage for T1 on T1 with the new wiring to test the CAN bus and test T1 stability. Let's see how it holds up for an hour.
+
 # 2026-05-03 Clockwork 2 filament feeders
 
 The long filament path has been annoying me, I had underextrusion issues from time to time, mostly with ABS and I suspected the nearly 2 meters of PTFE tubes to be the cause, mostly because when they were shorter I never had that issue.
